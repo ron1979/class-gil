@@ -12,6 +12,7 @@ isAutoPlay=false;
 
   changeBigImage(val:string) {
     this.bigImage=val;
+  //  this.isAutoPlay=false;
     console.log(`image selected from list at main: ${val}`);
   }
   changeState(val:string) {

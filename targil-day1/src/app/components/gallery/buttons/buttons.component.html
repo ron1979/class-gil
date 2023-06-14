@@ -1,2 +1,2 @@
-<button (click)="play()">play</button>
-<button (click)="stop()">stop</button>
+<button (click)="play()" [ngClass]="{'active': statusButton=='play'}">play</button>
+<button (click)="stop()" [ngClass]="{'active': statusButton=='stop'}">stop</button>
