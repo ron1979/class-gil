@@ -1,0 +1,37 @@
+// app-main {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     text-align: center;
+//     margin: 1rem auto;
+//     padding: 3rem;
+// }
+//the :host pseudo-class selector is specific to Angular and is used to target the host element of a component. The host element is the element that represents the component in the DOM. Using the :host selector allows you to apply styles to the host element of a component without affecting any other elements in the DOM. This is useful when you want to create a custom look and feel for a component or when you want to apply styles to the component's container element.
+//It's worth noting that :host is not a standard CSS selector and is not supported in all browsers. However, Angular provides a shim that emulates the behavior of :host in browsers that do not support it.
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 3rem;
+}
+
+app-header {
+    flex: 1 0 100%;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.pad {
+    padding: 0rem 1rem 3rem 1rem;
+}
+
+app-details {
+    flex: 1 27%;
+    border: 1px solid black;
+}
+
+app-works {
+    flex: 1 50%;
+    border: 1px solid black;
+}

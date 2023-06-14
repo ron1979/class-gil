@@ -1,0 +1,17 @@
+<ul>
+
+    <li *ngFor="let itm of list">
+
+        <image-small (imageClicked)="imgSelected($event)" [src]="itm"></image-small>
+    </li>
+</ul>
+<!-- <image-small></image-small> -->
+
+<!--
+https://picsum.photos/id/12/500/300
+https://picsum.photos/id/13/500/300
+https://picsum.photos/id/14/500/300
+https://picsum.photos/id/15/500/300
+https://picsum.photos/id/16/500/300
+https://picsum.photos/id/17/500/300
+https://picsum.photos/id/18/500/300 -->

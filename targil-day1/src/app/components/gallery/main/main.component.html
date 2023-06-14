@@ -1,0 +1,12 @@
+<h2>Gallery images</h2>
+
+<p>
+
+    תמונה גדולה וכמה תמונות קטנות-שקויות התמונה הגדולה מתעדכנת לאחר לחיצה על שקופית נגן- עובר בין התמונות בצורה אוטומטית אחת לכמה שניות והכפתור הפסק עוצר
+
+</p>
+
+
+<app-image-big [imgsrc]="bigImage"></app-image-big>
+<app-buttons (playClicked)="changeState($event)"></app-buttons>
+<app-image-list [autoPlay]="isAutoPlay" (imageSelected)="changeBigImage($event)"></app-image-list>

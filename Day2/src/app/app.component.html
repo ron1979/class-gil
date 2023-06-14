@@ -1,0 +1,147 @@
+<!-- <div class="one">
+
+    <div class="two"></div>
+</div>
+
+<div class="one">
+
+    <div class="two"></div>
+    <div class="
+    two"></div>
+</div>
+
+
+<h2>
+
+    content attribute
+</h2>
+<app-card [myContent]="'sdfdsf dsfds fdsf wsdas 3423432'"></app-card>
+
+
+<h2>
+
+    content projection
+</h2>
+<app-card>
+
+    <h1>
+        sdfdsfp
+    </h1>
+    <p class="t">my text goes here</p>
+    <p class="t">my text goes here 2</p>
+
+    <p id="other">sfsd fds</p>
+
+    <p id="other2">sfs other 2 dsf dsfdsf dsfd fds</p>
+</app-card> -->
+
+
+<h1 [ngStyle]="{
+    'color': 'red',
+    'font-size': '50px'
+}">Directives</h1>
+
+
+<p>
+    sdfs sdf sdf sdf
+</p>
+
+<app-button-class [isBig]="true"></app-button-class>
+<app-button-class [isBig]="false"></app-button-class>
+
+
+
+
+<h1 appHighlight>dsf </h1>
+<h1 [appRedGreen]="true">dsf </h1>
+<h3 [appRedGreen]="false">dsf </h3>
+
+
+<hr> stractula Directives
+
+<ul>
+    <li *ngFor="let itm of names">
+
+        {{itm}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let itm of names">
+
+        {{print(itm)}}
+    </li>
+</ul>
+
+
+<ul>
+    <li *ngFor="let itm of pepole; let idx=index; ">
+
+        {{idx}} : {{itm.age}}: {{itm.name}}
+    </li>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let itm of pepole; let idx=index; ">
+
+            <td>{{idx}} : {{itm.age}}: {{itm.name}}</td>
+            <td>{{itm.age}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<ul>
+    <ng-container *ngFor="let itm of pepole; let idx=index; ">
+
+        <li *ngIf="idx%2==1">
+            {{idx +1}} : {{itm.age}}: {{itm.name}}
+        </li>
+    </ng-container>
+
+</ul>
+
+<hr> pipe
+
+<p>{{today | date}}</p>
+<p>hour: {{today | date: 'HH:mm' }}</p>
+<p>short: {{today | date: 'short' }}</p>
+<p>short locale: {{today | date: 'short': 'UTC+02:00' }}</p>
+<p>short locale dateFormat: {{today | date: dateFormat: 'UTC+02:00' }}</p>
+
+<p>{{ 5.1232144 | number}}</p>
+<p>{{ 5.1232144 | number: '3.3-4'}}</p>
+
+<p>{{ 5.1932144 | number: '0.1-1'}}</p>
+
+<p>{{ pepole | json}}</p>
+
+<p> {{ 1 | currency: 'EUR' }}</p>
+
+<p> {{ 'sdfsdf' | uppercase }}</p>
+
+<p> {{ 'sdfsdf' | simanKriaa }}</p>
+<p> {{ 'sdfsdf' | simanKriaa:4 }}</p>
+<p> {{ 'sdfsdf' | simanKriaa:4: true }}</p>
+<!-- <ul>
+    <ng-container *ngFor="let itm of pepole; let idx=index; ">
+
+        <li>
+            {{idx +1}} : {{itm.age}}: {{itm.name}}
+        </li>
+    </ng-container>
+
+</ul> -->
+
+<p>היום יום : {{today | dayHeb }}</p>
+
+
+<p> {{ 'good morning evrybody' | firstUpper }}</p>
+<p> {{ 'good morning evrybody' | firstUpper : true}}</p>

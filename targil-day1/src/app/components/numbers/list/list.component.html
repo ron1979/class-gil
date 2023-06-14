@@ -1,0 +1,15 @@
+<p>The numbers:</p>
+
+<div class="buttons">
+    <button (click)="add()">add random num</button>
+    <button (click)="ascending()">sort ascending</button>
+    <button (click)="descending()">sort descending</button>
+    <button (click)="originalOrder()">return to original order</button>
+    <button (click)="originalOrderWithAddedNumbers()">return to original order include added numbers</button>
+</div>
+
+<ul>
+    <li *ngFor="let num of num">
+        {{num}}
+    </li>
+</ul>
